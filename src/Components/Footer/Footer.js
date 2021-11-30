@@ -11,7 +11,7 @@ const Footer = () => {
                         <Typography variant='h6' component='h6' sx={{ fontWeight: '700' }}>
                             <i className="fab fa-youtube"></i> Visume
                         </Typography>
-                        <Typography variant='p' component='p' sx={{ marginTop: '20px' }}>
+                        <Typography variant='p' component='p' sx={{ marginTop: '20px', color: '#fff' }}>
                             2238 Partha Elen Street,<br />
                             New Jersey,<br />
                             USA, 3322145698

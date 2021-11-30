@@ -19,7 +19,7 @@ const Navigation = () => {
 
     return (
         <AppBar position="static" sx={{ backgroundColor: '#F8FBFE', color: '#010D82', boxShadow: 0 }}>
-            <Container maxWidth="xl">
+            <Container>
                 <Toolbar disableGutters style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <Typography
                         variant="h6"
