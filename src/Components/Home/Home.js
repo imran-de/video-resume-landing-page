@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import GetStarted from '../GetStarted/GetStarted';
 import Navigation from '../Navigation/Navigation';
 import Partners from '../Partners/Partners';
+import WhatClientSay from '../WhatClientSay/WhatClientSay';
 const Home = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const Home = () => {
             <Partners />
             <GetStarted />
             <About />
+            <WhatClientSay />
             <Footer />
         </div>
     );

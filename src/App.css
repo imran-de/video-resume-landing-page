@@ -19,3 +19,27 @@ p{
 .css-1480iag-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
   border-bottom: none;
 }
+.MuiMobileStepper-dot{
+  display: none;
+}
+.arrow{
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: space-between;
+  width: 87vw;
+  margin-left: -40px;
+}
+.css-rh92k-MuiPaper-root-MuiMobileStepper-root{
+  background-color: rgba(255,255,255,0)!important;
+}
+.arrow button{
+  background-color: #51C9FF;
+  color: #101D82;
+  border-radius: 50%;
+  padding: 20px 10px;
+  font-size: 24px;
+}
+.arrow button:hover{
+  background-color: #fafafa;
+}
