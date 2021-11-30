@@ -106,7 +106,7 @@ const WhatClientSay = () => {
                                     sx={{
                                         display: 'flex',
                                         alignItems: 'center',
-                                        width: '80%',
+                                        width: { xs: '100%', md: '80%' },
                                         pl: 2,
                                     }}
                                 >

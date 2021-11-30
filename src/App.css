@@ -43,3 +43,10 @@ p{
 .arrow button:hover{
   background-color: #fafafa;
 }
+@media screen and (max-width: 768px) {
+  .arrow{
+    top:30%;
+    right: 0px;
+    width: 100%;
+  }
+}
