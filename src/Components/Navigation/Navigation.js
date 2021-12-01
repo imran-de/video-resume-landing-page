@@ -85,25 +85,25 @@ const Navigation = () => {
 
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block' }}
+                            sx={{ my: 2, display: 'block', color: '#010D82' }}
                         >
                             About
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block' }}
+                            sx={{ my: 2, display: 'block', color: '#010D82' }}
                         >
                             Pricing
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block' }}
+                            sx={{ my: 2, display: 'block', color: '#010D82' }}
                         >
                             Testimonials
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block' }}
+                            sx={{ my: 2, display: 'block', color: '#010D82' }}
                         >
                             Contact
                         </Button>
@@ -111,7 +111,7 @@ const Navigation = () => {
                     <Box sx={{ display: 'flex', flexGrow: 0 }}>
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block', marginRight: { xs: '0', md: '10px', lg: '15px' } }}
+                            sx={{ my: 2, display: 'block', color: '#010D82', marginRight: { xs: '0', md: '10px', lg: '15px' } }}
                         >
                             Sign in
                         </Button>

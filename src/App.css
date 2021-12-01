@@ -14,10 +14,10 @@ p{
 
 /* //subscribe border remove  */
 .css-1480iag-MuiInputBase-root-MuiInput-root:before {
-  border-bottom: none;
+  border-bottom: none!important;
 }
 .css-1480iag-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
-  border-bottom: none;
+  border-bottom: none!important;
 }
 .MuiMobileStepper-dot{
   display: none;
@@ -29,6 +29,7 @@ p{
   justify-content: space-between;
   width: 105%;
   margin-left: -40px;
+  background: rgba(255,255,255,0)!important;
 }
 .css-rh92k-MuiPaper-root-MuiMobileStepper-root{
   background-color: rgba(255,255,255,0)!important;
@@ -43,7 +44,7 @@ p{
   background-color: #fafafa;
 }
 /* /contact form style */
-.css-1480iag-MuiInputBase-root-MuiInput-root:before, .css-5xn5lu-MuiInputBase-root-MuiInput-root:before {
+.css-1480iag-MuiInputBase-root-MuiInput-root:before, .css-5xn5lu-MuiInputBase-root-MuiInput-root:before,.css-1wt0ykv:hover:not(.Mui-disabled)::before,.css-1wt0ykv::before,.css-1w19ck5::before,.css-1w19ck5:hover:not(.Mui-disabled)::before {
   border-bottom: none!important;
 }
 @media screen and (min-width: 922px) and (max-width: 1320px) {
