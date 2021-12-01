@@ -27,7 +27,7 @@ p{
   top: 40%;
   display: flex;
   justify-content: space-between;
-  width: 87vw;
+  width: 105%;
   margin-left: -40px;
 }
 .css-rh92k-MuiPaper-root-MuiMobileStepper-root{
@@ -42,6 +42,16 @@ p{
 }
 .arrow button:hover{
   background-color: #fafafa;
+}
+/* /contact form style */
+.css-1480iag-MuiInputBase-root-MuiInput-root:before, .css-5xn5lu-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: none!important;
+}
+@media screen and (min-width: 922px) and (max-width: 1320px) {
+  .arrow{
+    top:40%;
+    width: 105%;
+  }
 }
 @media screen and (max-width: 768px) {
   .arrow{

@@ -89,9 +89,9 @@ const WhatClientSay = () => {
                                                 <Box
                                                     component="img"
                                                     sx={{
-                                                        height: 255,
                                                         display: 'block',
-                                                        maxWidth: 400,
+                                                        maxWidth: '385px',
+                                                        height: '385px',
                                                         overflow: 'hidden',
                                                         width: '100%',
                                                         borderRadius: '20px'
