@@ -9,23 +9,27 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
     {
         label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath:
-            'https://i.ibb.co/nLP6wM4/feedback.png',
+        imgPath: 'https://i.ibb.co/nLP6wM4/feedback.png',
+        name: 'Jerry',
+        profession: 'Commerce student',
     },
     {
         label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath:
-            'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+        imgPath: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+        name: 'Karina',
+        profession: 'Drama',
     },
     {
         label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath:
-            'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+        imgPath: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+        name: 'Apu Khan',
+        profession: 'Actress',
     },
     {
         label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath:
-            'https://i.ibb.co/nLP6wM4/feedback.png',
+        imgPath: 'https://i.ibb.co/nLP6wM4/feedback.png',
+        name: 'Bonna Mirja',
+        profession: 'Science student',
     },
 ];
 
@@ -90,6 +94,7 @@ const WhatClientSay = () => {
                                                         maxWidth: 400,
                                                         overflow: 'hidden',
                                                         width: '100%',
+                                                        borderRadius: '20px'
                                                     }}
                                                     src={step.imgPath}
                                                     alt={step.label}
@@ -108,9 +113,14 @@ const WhatClientSay = () => {
                                         alignItems: 'center',
                                         width: { xs: '100%', md: '80%' },
                                         pl: 2,
+                                        backgroundColor: 'rgba(255,255,255,.01)'
                                     }}
                                 >
-                                    <Typography>{images[activeStep].label}</Typography>
+                                    <Box>
+                                        <Typography>{images[activeStep]?.label}</Typography>
+                                        <Typography variant='p' component='p' sx={{ color: '#010D82', fontWeight: '600', pt: '16px' }}>{images[activeStep]?.name}</Typography>
+                                        <Typography variant='p' component='p'>{images[activeStep]?.profession}</Typography>
+                                    </Box>
                                 </Paper>
                             </Grid>
                         </Grid>
