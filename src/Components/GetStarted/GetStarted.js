@@ -1,16 +1,15 @@
 import { Container, Grid, Paper, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import getStarted from '../../Images/getstart.png';
 
-const startedData = [
-    { id: 1, iconClass: 'fas fa-user-plus', step: '01', title: ' Create an account', des: 'You need to create an account. You can do this by clicking on the Sign up button above.' },
-    { id: 2, iconClass: 'fas fa-bars', step: '02', title: 'Choose a theme', des: 'Vertical, short or long. We give you the control to make your video resume. We’ve more than 150+ themes.' },
-    { id: 3, iconClass: 'fas fa-film', step: '03', title: 'Edit on the Web', des: 'Add your video clip(s), texts, decoration and effects. All these can be done on the web.' },
-    { id: 4, iconClass: 'far fa-flag', step: '04', title: 'Ready to Fly', des: 'You’re all set to get hired with flying colors now.' },
-]
-
 const GetStarted = () => {
+    const [startedData, setStartedData] = useState([]);
+    useEffect(() => {
+        fetch('/startedData.json')
+            .then(res => res.json())
+            .then(data => setStartedData(data));
+    }, [])
     return (
         <Box>
             <Container>

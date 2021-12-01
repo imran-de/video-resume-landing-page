@@ -1,43 +1,22 @@
 import { useTheme } from '@emotion/react';
 import { Button, Container, Grid, MobileStepper, Paper, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
-    {
-        label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath: 'https://i.ibb.co/nLP6wM4/feedback.png',
-        name: 'Jerry',
-        profession: 'Commerce student',
-    },
-    {
-        label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-        name: 'Karina',
-        profession: 'Drama',
-    },
-    {
-        label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-        name: 'Apu Khan',
-        profession: 'Actress',
-    },
-    {
-        label: '“With the traditional resumes I used to apply for jobs and would get only a few calls. But after creating a video resume, I’ve got 9/10 calls. And I love the simplicity of the video creation process being a non techie.”',
-        imgPath: 'https://i.ibb.co/nLP6wM4/feedback.png',
-        name: 'Bonna Mirja',
-        profession: 'Science student',
-    },
-];
-
 const WhatClientSay = () => {
+    const [feedbacks, setFeedBacks] = useState([]);
+    useEffect(() => {
+        fetch('/whatClientSayFakeData.json')
+            .then(res => res.json())
+            .then(data => setFeedBacks(data))
+    }, [])
 
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = images.length;
+    const maxSteps = feedbacks.length;
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -83,7 +62,7 @@ const WhatClientSay = () => {
                                     onChangeIndex={handleStepChange}
                                     enableMouseEvents
                                 >
-                                    {images.map((step, index) => (
+                                    {feedbacks.map((step, index) => (
                                         <div key={Math.random()}>
                                             {Math.abs(activeStep - index) <= 2 ? (
                                                 <Box
@@ -117,9 +96,9 @@ const WhatClientSay = () => {
                                     }}
                                 >
                                     <Box>
-                                        <Typography>{images[activeStep]?.label}</Typography>
-                                        <Typography variant='p' component='p' sx={{ color: '#010D82', fontWeight: '600', pt: '16px' }}>{images[activeStep]?.name}</Typography>
-                                        <Typography variant='p' component='p'>{images[activeStep]?.profession}</Typography>
+                                        <Typography>{feedbacks[activeStep]?.label}</Typography>
+                                        <Typography variant='p' component='p' sx={{ color: '#010D82', fontWeight: '600', pt: '16px' }}>{feedbacks[activeStep]?.name}</Typography>
+                                        <Typography variant='p' component='p'>{feedbacks[activeStep]?.profession}</Typography>
                                     </Box>
                                 </Paper>
                             </Grid>
