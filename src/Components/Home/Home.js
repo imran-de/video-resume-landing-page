@@ -5,6 +5,7 @@ import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import GetStarted from '../GetStarted/GetStarted';
 import Navigation from '../Navigation/Navigation';
+import Packages from '../Packages/Packages';
 import Partners from '../Partners/Partners';
 import WhatClientSay from '../WhatClientSay/WhatClientSay';
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <Partners />
             <GetStarted />
             <About />
+            <Packages />
             <WhatClientSay />
             <Contact />
             <Footer />

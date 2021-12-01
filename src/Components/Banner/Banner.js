@@ -23,7 +23,14 @@ const Banner = () => {
                         </Typography>
                         <Box sx={{ display: 'flex', paddingTop: '40px' }}>
                             <Button
-                                sx={{ my: 2, px: { xs: '18px', md: '34px' }, py: { xs: '8px', md: '13px' }, display: 'block', color: '#fff', backgroundColor: '#010D82' }}>
+                                sx={{
+                                    my: 2,
+                                    px: { xs: '18px', md: '34px' },
+                                    py: { xs: '8px', md: '13px' },
+                                    display: 'block', color: '#fff',
+                                    backgroundColor: '#010D82',
+                                    '&:hover': { backgroundColor: '#fff', color: '#010D82' }
+                                }}>
                                 Get Started
                             </Button>
                             <Button

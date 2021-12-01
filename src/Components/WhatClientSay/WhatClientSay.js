@@ -135,12 +135,18 @@ const WhatClientSay = () => {
                                 size="small"
                                 onClick={handleNext}
                                 disabled={activeStep === maxSteps - 1}
+                                sx={{ color: '#fff', '&:hover': { color: '#101D82' } }}
                             >
                                 <i className="fas fa-arrow-right"></i>
                             </Button>
                         }
                         backButton={
-                            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                            <Button
+                                size="small"
+                                onClick={handleBack}
+                                disabled={activeStep === 0}
+                                sx={{ color: '#fff', '&:hover': { color: '#101D82' } }}
+                            >
                                 <i className="fas fa-arrow-left"></i>
                             </Button>
                         }
