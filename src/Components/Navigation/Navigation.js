@@ -5,6 +5,7 @@ import React from 'react';
 import './Navigation.css';
 
 import logo from '../../Images/logo.png';
+import { HashLink } from 'react-router-hash-link';
 
 const Navigation = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -18,10 +19,10 @@ const Navigation = () => {
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: '#F8FBFE', color: '#010D82', boxShadow: 0 }}>
+        <AppBar position="sticky" sx={{ backgroundColor: '#F8FBFE', color: '#010D82', boxShadow: 0 }}>
             <Container>
                 <Toolbar disableGutters style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Typography
+                    <Typography as={HashLink} smooth to='/'
                         variant="h6"
                         noWrap
                         component="div"
@@ -59,17 +60,17 @@ const Navigation = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            <MenuItem onClick={handleCloseNavMenu} sx={{ color: '#010D82' }}>
-                                <Typography textAlign="center">About</Typography>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography as={HashLink} smooth to='/#about' textAlign="center">About</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu} sx={{ color: '#010D82' }}>
-                                <Typography textAlign="center">Pricing</Typography>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography as={HashLink} smooth to='/#pricing' textAlign="center">Pricing</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu} sx={{ color: '#010D82' }}>
-                                <Typography textAlign="center">Testimonials</Typography>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography as={HashLink} smooth to='/#testimonial' textAlign="center">Testimonials</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu} sx={{ color: '#010D82' }}>
-                                <Typography textAlign="center">Contact</Typography>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography as={HashLink} smooth to='/#contact' textAlign="center">Contact</Typography>
                             </MenuItem>
                         </Menu>
                     </Box>
@@ -81,31 +82,31 @@ const Navigation = () => {
                     >
                         <img src={logo} alt="site logo" />
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', color: '#010D82', justifyContent: 'center' } }}>
+                    <Box className='nav-menu' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', color: '#010D82', justifyContent: 'center' } }}>
 
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block', color: '#010D82' }}
+                            sx={{ my: 2, display: 'block' }}
                         >
-                            About
+                            <Typography as={HashLink} smooth to='/#about'>About</Typography>
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block', color: '#010D82' }}
+                            sx={{ my: 2, display: 'block' }}
                         >
-                            Pricing
+                            <Typography as={HashLink} smooth to='/#pricing'>Pricing</Typography>
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block', color: '#010D82' }}
+                            sx={{ my: 2, display: 'block' }}
                         >
-                            Testimonials
+                            <Typography as={HashLink} smooth to='/#testimonial'>Testimonials</Typography>
                         </Button>
                         <Button
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, display: 'block', color: '#010D82' }}
+                            sx={{ my: 2, display: 'block' }}
                         >
-                            Contact
+                            <Typography as={HashLink} smooth to='/#contact'>Contact</Typography>
                         </Button>
                     </Box>
                     <Box sx={{ display: 'flex', flexGrow: 0 }}>

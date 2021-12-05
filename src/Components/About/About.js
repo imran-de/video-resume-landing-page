@@ -5,7 +5,7 @@ import about from '../../Images/about.png';
 const About = () => {
     return (
         <Box>
-            <Container sx={{ my: '135px' }}>
+            <Container id='about' sx={{ my: '135px' }}>
 
                 <Grid container spacing={2} sx={{ mt: '30px' }}>
                     <Grid item xs={12} md={6}>

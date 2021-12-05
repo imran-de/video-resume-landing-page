@@ -10,7 +10,7 @@ const Contact = () => {
 
     return (
         <Box sx={{ mb: '114px' }}>
-            <Container>
+            <Container id='contact'>
                 <Typography variant='h4' component='h4' sx={{ fontSize: '20px', lineHeight: '30px', color: '#51C9FF', textAlign: 'center' }}>
                     Lets's Talk
                 </Typography>

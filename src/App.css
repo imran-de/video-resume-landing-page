@@ -4,8 +4,14 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+a{
+  text-decoration: none!important;
+}
 p{
   color: #84879E;
+}
+.nav-menu a{
+  color: #010D82;
 }
 .social-menu{
   display: flex;

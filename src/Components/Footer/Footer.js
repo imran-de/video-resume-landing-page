@@ -99,7 +99,7 @@ const Footer = () => {
                     </Grid>
 
                     <Grid item md={3} sx={{ color: '#fff' }}>
-                        <Typography variant='h6' component='h6' sx={{ fontWeight: '700' }}>
+                        <Typography variant='h6' component='h6' sx={{ fontWeight: '700', mb: '16px' }}>
                             Subscribe to Newsletter
                         </Typography>
                         <FormControl sx={{ margin: 'none', backgroundColor: '#F8FBFE', borderRadius: '8px' }}>

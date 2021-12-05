@@ -5,7 +5,7 @@ import React from 'react';
 const Packages = () => {
     return (
         <Box>
-            <Container sx={{ my: '135px' }}>
+            <Container id='pricing' sx={{ my: '135px' }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <Typography variant='h4' component='h4' sx={{ fontSize: '20px', lineHeight: '30px', color: '#51C9FF' }}>
